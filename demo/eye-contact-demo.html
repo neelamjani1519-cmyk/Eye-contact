@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Eye Contact — WW (vw) Sizes Demo</title>
+  <link rel="stylesheet" href="../styles/eye-contact.css">
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; padding:24px; color:#111 }
+    .container { max-width:900px }
+    pre { background:#f6f6f6; padding:12px; border-radius:6px }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Eye Contact — `ww` (vw) sizes demo</h1>
+    <p>These tokens use viewport width units (`vw`) as the "ww" sizing system.</p>
+
+    <section>
+      <h2>Modifier classes</h2>
+      <div class="demo-row">
+        <div class="demo-item"><div class="eye-contact eye-contact--xs"><div class="eye-contact__pupil"></div></div><div class="demo-label">xs (2.5vw)</div></div>
+        <div class="demo-item"><div class="eye-contact eye-contact--sm"><div class="eye-contact__pupil"></div></div><div class="demo-label">sm (3.5vw)</div></div>
+        <div class="demo-item"><div class="eye-contact eye-contact--md"><div class="eye-contact__pupil"></div></div><div class="demo-label">md (5vw)</div></div>
+        <div class="demo-item"><div class="eye-contact eye-contact--lg"><div class="eye-contact__pupil"></div></div><div class="demo-label">lg (8vw)</div></div>
+        <div class="demo-item"><div class="eye-contact eye-contact--xl"><div class="eye-contact__pupil"></div></div><div class="demo-label">xl (12vw)</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Attribute API</h2>
+      <div class="demo-row">
+        <div class="demo-item"><div class="eye-contact" data-size="md"><div class="eye-contact__pupil"></div></div><div class="demo-label">data-size="md"</div></div>
+        <div class="demo-item"><div class="eye-contact" data-size="lg"><div class="eye-contact__pupil"></div></div><div class="demo-label">data-size="lg"</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Usage</h2>
+      <pre>&lt;!-- class API --&gt;
+&lt;div class="eye-contact eye-contact--lg"&gt;&lt;!-- ... --&gt;&lt;/div&gt;
+
+&lt;!-- attribute API --&gt;
+&lt;div class="eye-contact" data-size="sm"&gt;&lt;/div&gt;
+      </pre>
+    </section>
+  </div>
+</body>
+</html>

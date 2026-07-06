@@ -1,0 +1,50 @@
+/* CSS tokens and utility classes for `ww` (viewport-width) sizes
+   for an "eye contact" circular element. Use the classes
+   or the `data-size` attribute to pick a size.
+*/
+:root {
+  --eye-ww-xs: 2.5vw;
+  --eye-ww-sm: 3.5vw;
+  --eye-ww-md: 5vw;
+  --eye-ww-lg: 8vw;
+  --eye-ww-xl: 12vw;
+  --eye-ww-default: var(--eye-ww-md);
+}
+
+.eye-contact {
+  width: var(--eye-ww-default);
+  height: var(--eye-ww-default);
+  border-radius: 50%;
+  background: #111;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Size modifier classes */
+.eye-contact--xs { width: var(--eye-ww-xs); height: var(--eye-ww-xs); }
+.eye-contact--sm { width: var(--eye-ww-sm); height: var(--eye-ww-sm); }
+.eye-contact--md { width: var(--eye-ww-md); height: var(--eye-ww-md); }
+.eye-contact--lg { width: var(--eye-ww-lg); height: var(--eye-ww-lg); }
+.eye-contact--xl { width: var(--eye-ww-xl); height: var(--eye-ww-xl); }
+
+/* Attribute API alternative */
+.eye-contact[data-size="xs"] { width: var(--eye-ww-xs); height: var(--eye-ww-xs); }
+.eye-contact[data-size="sm"] { width: var(--eye-ww-sm); height: var(--eye-ww-sm); }
+.eye-contact[data-size="md"] { width: var(--eye-ww-md); height: var(--eye-ww-md); }
+.eye-contact[data-size="lg"] { width: var(--eye-ww-lg); height: var(--eye-ww-lg); }
+.eye-contact[data-size="xl"] { width: var(--eye-ww-xl); height: var(--eye-ww-xl); }
+
+/* Helpful utility for showing a pupil */
+.eye-contact__pupil {
+  width: 40%;
+  height: 40%;
+  background: #fff;
+  border-radius: 50%;
+  margin: 30% auto 0 auto;
+}
+
+/* Make demo layout tidy */
+.demo-row { display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+.demo-item { display:flex; gap:8px; align-items:center; }
+.demo-label { font-family: system-ui, Arial, sans-serif; font-size:0.9rem; color:#222; }
